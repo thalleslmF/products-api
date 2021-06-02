@@ -1,0 +1,23 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-table-user
+      author: thalles
+      changes:
+        - createTable:
+            tableName: products
+            columns:
+              - column:
+                  constraints:
+                    primaryKey: true
+                  name: id
+                  type: VARCHAR(250)
+              - column:
+                  name: description
+                  type: VARCHAR(64)
+              - column:
+                  name: name
+                  type: VARCHAR(64)
+              - column:
+                  name: price
+                  type: BIGINT
+

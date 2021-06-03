@@ -8,9 +8,11 @@ import com.example.demo.unit.TestUtils
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.boot.test.web.client.TestRestTemplate
+import org.springframework.data.relational.core.sql.SQL
 import org.springframework.http.HttpStatus
+import org.springframework.test.annotation.DirtiesContext
 import spock.lang.Specification
-
+@DirtiesContext(classMode = DirtiesContext.ClassMode.AFTER_EACH_TEST_METHOD)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 class CreateProductTest extends Specification {
 
@@ -29,7 +31,6 @@ class CreateProductTest extends Specification {
             assert result.body.code == 400
             assert result.statusCode == HttpStatus.BAD_REQUEST
     }
-
     def "when it is a valid product should create successfully"() {
         given:
         def productRequest = TestUtils.productRequest

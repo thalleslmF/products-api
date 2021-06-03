@@ -16,5 +16,6 @@ public interface ProductService {
     List<Product> findByParam(String name, Double minPrice, Double maxPrice);
 
     List<Product> findAll();
+
     void remove(String id);
 }

@@ -14,6 +14,7 @@ Inside the root folder, run the following command:
 mvn clean install
 mvn spring-boot:run
 ```
+
 ### More information about the api
 
 Check the  [Swagger API Documentation], and the [Postman Collection].

@@ -21,5 +21,5 @@ Check the  [Swagger API Documentation], and the [Postman Collection].
 
 [Java 11]: https://www.oracle.com/java/technologies/javase-jdk11-downloads.html
 [Maven]: https://maven.apache.org/
-[Swagger API Documentation]: http://localhost:9999/swagger-ui
+[Swagger API Documentation]: http://localhost:9999/swagger-ui.html
 [Postman Collection]: https://www.getpostman.com/collections/a45a43b6ad8b754fdfcb

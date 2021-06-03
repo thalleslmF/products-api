@@ -1,6 +1,6 @@
 package com.example.demo.integration
 
-import com.example.demo.dto.request.ProductRequest
+
 import com.example.demo.dto.response.ProductResponse
 import com.example.demo.exception.handler.ErrorMessageResponse
 import com.example.demo.repository.ProductRepository
@@ -8,7 +8,6 @@ import com.example.demo.unit.TestUtils
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.boot.test.web.client.TestRestTemplate
-import org.springframework.data.relational.core.sql.SQL
 import org.springframework.http.HttpStatus
 import org.springframework.test.annotation.DirtiesContext
 import spock.lang.Specification
@@ -28,7 +27,7 @@ class CreateProductTest extends Specification {
         when:
             def result = restTemplate.postForEntity("/products", notValidProductRequest, ErrorMessageResponse.class)
         then:
-            assert result.body.code == 400
+            assert result.body.status_code == 400
             assert result.statusCode == HttpStatus.BAD_REQUEST
     }
     def "when it is a valid product should create successfully"() {

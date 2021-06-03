@@ -2,9 +2,9 @@ package com.example.demo.dto.request;
 
 import com.example.demo.entity.Product;
 
-import javax.validation.constraints.Min;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Positive;
 import java.util.UUID;
 
 public class ProductRequest {
@@ -18,7 +18,7 @@ public class ProductRequest {
     private String description;
 
     @NotNull
-    @Min(value=0)
+    @Positive
     private Double price;
 
     public Product toEntity() {

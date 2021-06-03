@@ -1,20 +1,20 @@
 package com.example.demo.exception.handler;
 
 public class ErrorMessageResponse {
-    private int code;
+    private int status_code;
     private String message;
 
-    public ErrorMessageResponse(int code, String message) {
-        this.code = code;
+    public ErrorMessageResponse(int status_code, String message) {
+        this.status_code = status_code;
         this.message = message;
     }
 
-    public int getCode() {
-        return code;
+    public int getStatus_code() {
+        return status_code;
     }
 
-    public void setCode(int code) {
-        this.code = code;
+    public void setStatus_code(int status_code) {
+        this.status_code = status_code;
     }
 
     public String getMessage() {

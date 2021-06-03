@@ -8,6 +8,7 @@ import javax.validation.constraints.NotNull;
 import java.util.UUID;
 
 public class ProductRequest {
+
     @NotNull
     @NotEmpty
     private String name;
@@ -29,6 +30,14 @@ public class ProductRequest {
         );
     }
 
+    public Product toEntity(String id) {
+        return new Product(
+                id,
+                this.description,
+                this.name,
+                this.price
+        );
+    }
     public String getName() {
         return name;
     }

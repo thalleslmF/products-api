@@ -4,10 +4,10 @@ import com.example.demo.entity.Product;
 import java.util.List;
 import java.util.Optional;
 public interface ProductRepository {
-    Optional<Product> save(Product product);
+    Product save(Product product);
     Optional<Product> findById(String id);
     List<Product> find();
-    void delete();
-    Product update();
+    void delete(String id);
+    Product update(Product product);
     List<Product> find(String name, Double minPrice, Double maxPrice);
 }

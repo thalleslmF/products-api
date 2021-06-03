@@ -1,4 +1,4 @@
-package com.example.demo.repository;
+package com.example.demo.repository.extractor;
 
 import com.example.demo.entity.Product;
 import org.springframework.jdbc.core.RowCallbackHandler;
